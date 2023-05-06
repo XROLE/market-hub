@@ -11,6 +11,7 @@ class AppSearchBar extends StatelessWidget {
     return TextField(
       controller: searchController,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(vertical: 0),
         hintText: 'Search...',
         prefixIcon: Icon(Icons.search, color: AppColors.textGrey,),
         border: OutlineInputBorder(
