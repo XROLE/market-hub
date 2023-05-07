@@ -38,7 +38,12 @@ class BuyNowBottomNav extends StatelessWidget {
                     Container(
                       width: 70,
                       height: 50,
-                      color: AppColors.primaryColor,
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryColor,
+                          borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          bottomLeft: Radius.circular(8)
+                        )),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -56,7 +61,12 @@ class BuyNowBottomNav extends StatelessWidget {
                     Expanded(
                       child: Container(
                         height: 50,
+                        decoration: BoxDecoration(
                         color: AppColors.darkBlue,
+                          borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(8),
+                          bottomRight: Radius.circular(8)
+                        )),
                         child: Center(
                             child: Text(
                           "Buy NOW",

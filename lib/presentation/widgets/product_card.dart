@@ -14,7 +14,7 @@ class ProductCard extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const ProductDetailsPage()));
+                builder: (context) => ProductDetailsPage(productImageUrl: imageUrl,)));
       },
       child: Container(
         color: AppColors.textGrey.withOpacity(.09),
