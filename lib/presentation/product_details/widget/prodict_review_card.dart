@@ -17,8 +17,10 @@ class ProductReviewCard extends StatelessWidget {
                 height: 40,
                 width: 40,
                 decoration: BoxDecoration(
-                    color: AppColors.textGrey,
-                    borderRadius: BorderRadius.circular(20)),
+                  color: AppColors.textGrey,
+                  borderRadius: BorderRadius.circular(20),
+                  image: const DecorationImage(image: AssetImage("assets/img/avatar.png"))
+                ),
               ),
               const SizedBox(width: 8),
               Text(
@@ -110,14 +112,15 @@ class ProductReviewCard extends StatelessWidget {
           )
         ],
       ),
-    const SizedBox(height: 30),
-    Column(
-      children: [
-        Divider(color: AppColors.textGrey,),
-     const SizedBox(height: 20),
-      ],
-    ),
+      const SizedBox(height: 30),
+      Column(
+        children: [
+          Divider(
+            color: AppColors.textGrey,
+          ),
+          const SizedBox(height: 20),
+        ],
+      ),
     ]);
-    
   }
 }

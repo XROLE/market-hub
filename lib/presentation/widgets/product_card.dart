@@ -5,16 +5,22 @@ import 'package:market_hub/utils/text_style.dart';
 
 class ProductCard extends StatelessWidget {
   final String imageUrl;
-  const ProductCard({required this.imageUrl, super.key});
+  final bool canNavigate;
+  const ProductCard(
+      {this.canNavigate = true, required this.imageUrl, super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ProductDetailsPage(productImageUrl: imageUrl,)));
+        if (canNavigate) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ProductDetailsPage(
+                        productImageUrl: imageUrl,
+                      )));
+        }
       },
       child: Container(
         color: AppColors.textGrey.withOpacity(.09),
