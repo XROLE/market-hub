@@ -20,7 +20,6 @@ class ProductGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return GridView.count(
       crossAxisCount: 2,
       childAspectRatio: 0.8,
