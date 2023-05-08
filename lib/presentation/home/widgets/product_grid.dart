@@ -20,15 +20,19 @@ class ProductGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
-      childAspectRatio: 0.8,
-      crossAxisSpacing: 15,
-      mainAxisSpacing: 30,
-      padding: const EdgeInsets.all(10),
-      children: images.map((image) {
-        return ProductCard(imageUrl: image,);
-      }).toList(),
+    return SliverGrid(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 0.8,
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 30,
+      ),
+      delegate: SliverChildBuilderDelegate((context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: ProductCard(imageUrl: images[index]));
+      },
+      childCount: images.length),
     );
   }
 }
