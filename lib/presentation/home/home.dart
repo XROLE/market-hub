@@ -3,7 +3,6 @@ import 'package:market_hub/presentation/home/widgets/app_notification_widget.dar
 import 'package:market_hub/presentation/home/widgets/app_searchbar.dart';
 import 'package:market_hub/presentation/home/widgets/bottom_nav_bar.dart';
 import 'package:market_hub/presentation/home/widgets/product_grid.dart';
-import 'package:market_hub/presentation/product_details/widget/prodict_review_card.dart';
 import 'package:market_hub/presentation/widgets/unfocus_widget.dart';
 import 'package:market_hub/utils/colors.dart';
 import 'package:market_hub/utils/text_style.dart';
@@ -41,13 +40,58 @@ class HomePage extends StatelessWidget {
               backgroundColor: AppColors.white,
               expandedHeight: size.height * .25,
               flexibleSpace: FlexibleSpaceBar(
-                background: Image.asset(
-                  "assets/img/sample_shirts1.png",
-                  fit: BoxFit.cover,
+                background: Stack(
+                  children: [
+                    Image.asset(
+                      "assets/img/sample_shirts3.png",
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      color: AppColors.bgColor.withOpacity(.2),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(children: [
+                        Expanded(
+                          flex: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "#BEAUTYSALE",
+                                style: AppTextStyle.title(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                "DISCOVER OUR BEST QUALITY",
+                                style: AppTextStyle.title(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 20),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15, vertical: 10),
+                                decoration:
+                                    BoxDecoration(color: AppColors.black,
+                                    borderRadius: BorderRadius.circular(6)
+                                    ),
+                                child: Text(
+                                  "Check this out",
+                                  style: AppTextStyle.caption(
+                                      color: AppColors.white),
+                                ),
+                              ),
+                              const SizedBox(height: 30),
+                            ],
+                          ),
+                        ),
+                        const Expanded(flex: 1, child: SizedBox()),
+                      ]),
+                    ),
+                  ],
                 ),
               ),
             ),
-            
             SliverToBoxAdapter(
               child: Container(
                   padding: const EdgeInsets.only(top: 10),
@@ -65,15 +109,14 @@ class HomePage extends StatelessWidget {
                             Text(
                               "See More",
                               style: AppTextStyle.subTitle(
-                                  fontSize: 18,
-                                  color: AppColors.primaryColor),
+                                  fontSize: 18, color: AppColors.primaryColor),
                             ),
                           ]),
                     ),
                     const SizedBox(height: 20),
                   ])),
             ),
- ProductGrid()
+            ProductGrid()
           ],
         ),
       ),

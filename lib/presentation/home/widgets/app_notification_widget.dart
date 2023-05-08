@@ -12,7 +12,7 @@ class AppNotificationWidget extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        Icon(iconData, size: 26,),
+        Icon(iconData, size: 26, color: AppColors.black,),
         Positioned(
           bottom: 15,
           left: 15,
