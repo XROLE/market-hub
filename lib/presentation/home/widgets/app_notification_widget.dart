@@ -17,8 +17,8 @@ class AppNotificationWidget extends StatelessWidget {
           bottom: 15,
           left: 15,
           child: Container(
-            height: 20,
-            width: 22,
+            height: 16,
+            width: 18,
             decoration: BoxDecoration(
                 color: AppColors.red, borderRadius: BorderRadius.circular(5)),
             child: Center(
@@ -26,7 +26,7 @@ class AppNotificationWidget extends StatelessWidget {
               val,
               style:  TextStyle(
                   color: AppColors.white,
-                  fontSize: 12,
+                  fontSize: 10,
                   ),
             )),
           ),
