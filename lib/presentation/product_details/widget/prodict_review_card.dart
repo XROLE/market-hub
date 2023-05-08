@@ -19,7 +19,7 @@ class ProductReviewCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColors.textGrey,
                   borderRadius: BorderRadius.circular(20),
-                  image: const DecorationImage(image: AssetImage("assets/img/avatar.png"))
+                  image: const DecorationImage(image: AssetImage("assets/img/avatar3.png"))
                 ),
               ),
               const SizedBox(width: 8),
