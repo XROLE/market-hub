@@ -8,22 +8,26 @@ class AppSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: searchController,
-      decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 0),
-        hintText: 'Search...',
-        prefixIcon: Icon(Icons.search, color: AppColors.textGrey,),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+    return SizedBox(
+      height: 35,
+      child: TextField(
+        controller: searchController,
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.symmetric(vertical: 0),
+          hintText: 'Search...',
+          prefixIcon: Icon(Icons.search, color: AppColors.textGrey,),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppColors.textGrey),
+            borderRadius: BorderRadius.circular(10),
+            gapPadding: 0,
+          ),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.textGrey),
-          borderRadius: BorderRadius.circular(10),
-        ),
+        onChanged: (value) {
+        },
       ),
-      onChanged: (value) {
-      },
     );
   }
 }

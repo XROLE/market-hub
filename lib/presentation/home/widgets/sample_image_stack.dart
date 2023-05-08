@@ -35,13 +35,13 @@ class SampleImageStack extends StatelessWidget {
                   Text(
                     "#BEAUTYSALE",
                     style: AppTextStyle.title(
-                        fontSize: 16, fontWeight: FontWeight.bold),
+                        fontSize: 12, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     title,
                     style: AppTextStyle.title(
-                        fontSize: 20, fontWeight: FontWeight.bold),
+                        fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
                   Container(

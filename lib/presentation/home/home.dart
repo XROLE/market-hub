@@ -23,21 +23,18 @@ class HomePage extends StatelessWidget {
               pinned: true,
               elevation: 0,
               floating: true,
-              title: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: SizedBox(
-                  width: size.width,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(width: size.width * .7, child: AppSearchBar()),
-                        const AppNotificationWidget(
-                            val: "1",
-                            iconData: Icons.shopping_cart_checkout_outlined),
-                        const AppNotificationWidget(
-                            val: "9+", iconData: Icons.add_moderator_outlined),
-                      ]),
-                ),
+              title: SizedBox(
+                width: size.width,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(width: size.width * .7, child: AppSearchBar()),
+                      const AppNotificationWidget(
+                          val: "1",
+                          iconData: Icons.shopping_cart_checkout_outlined),
+                      const AppNotificationWidget(
+                          val: "9+", iconData: Icons.add_moderator_outlined),
+                    ]),
               ),
               backgroundColor: AppColors.white,
               expandedHeight: size.height * .25,
