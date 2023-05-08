@@ -16,6 +16,7 @@ class Recommendations extends StatelessWidget {
       childAspectRatio: 0.8,
       crossAxisSpacing: 15,
       mainAxisSpacing: 30,
+      physics: const NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10),
       children: images.map((image) {
         return ProductCard(imageUrl: AppHelper.recommendProduct(), canNavigate: false,);

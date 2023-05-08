@@ -9,7 +9,7 @@ class BuyNowBottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      height: 80,
+      height: 75,
       child: Row(
         children: [
           Expanded(
